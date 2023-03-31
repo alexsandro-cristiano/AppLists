@@ -1,4 +1,4 @@
-import { ICategory, ICategoryDTO } from "../repositories/ICategoriesRepository";
+import { ICategory, ICategoryDTO } from "../repositories/Category/ICategory";
 
 class CategoryService {
   private repository: ICategory;
@@ -7,14 +7,14 @@ class CategoryService {
     this.repository = repository;
   }
 
-  public create({ description, name }: ICategoryDTO): void {
+  public create({ name }: ICategoryDTO): void {
     const categoryAlreadyExists = this.repository.findByName(name);
 
     if (categoryAlreadyExists) {
       throw new Error("Category Alread exists!");
     }
 
-    this.repository.create({ name, description });
+    this.repository.create({ name });
   }
 }
 

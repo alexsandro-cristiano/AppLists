@@ -1,5 +1,5 @@
-import { Category } from "../model/Category";
-import { ICategory, ICategoryDTO } from "./ICategoriesRepository";
+import { Category } from "../../model/Category";
+import { ICategory, ICategoryDTO } from "./ICategory";
 
 class CategoriesRepository implements ICategory {
   private categories: Category[];
@@ -8,11 +8,10 @@ class CategoriesRepository implements ICategory {
     this.categories = [];
   }
 
-  public create({ name, description }: ICategoryDTO): void {
+  public create({ name }: ICategoryDTO): void {
     const category = new Category();
     Object.assign(category, {
       name,
-      description,
       create_at: new Date(),
     });
     this.categories.push(category);
