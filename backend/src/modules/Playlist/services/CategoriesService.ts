@@ -1,6 +1,6 @@
 import { ICategory, ICategoryDTO } from "../repositories/Category/ICategory";
 
-class CategoryService {
+class CategoriesService {
   private repository: ICategory;
 
   constructor(repository: ICategory) {
@@ -18,4 +18,4 @@ class CategoryService {
   }
 }
 
-export { CategoryService };
+export { CategoriesService };
