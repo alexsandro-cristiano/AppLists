@@ -4,10 +4,10 @@ interface ICategoryDTO {
   name: string;
 }
 
-interface ICategory {
+interface ICategoryRepository {
   findByName(name: string): Category;
   listAll(): Category[];
   create({ name }: ICategoryDTO): void;
 }
 
-export { ICategory, ICategoryDTO };
+export { ICategoryRepository, ICategoryDTO };
