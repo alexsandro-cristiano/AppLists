@@ -1,23 +1,21 @@
-import { CategoriesRepository } from "../repositories/CategoriesRepository";
-
-interface IProps {
-  name: string;
-  description: string;
-}
+import { ICategory, ICategoryDTO } from "../repositories/ICategoriesRepository";
 
 class CategoryService {
-  private repository: CategoriesRepository;
+  private repository: ICategory;
 
-  constructor(repository: CategoriesRepository) {
+  constructor(repository: ICategory) {
     this.repository = repository;
   }
 
-  public create({ description, name }: IProps): void {
+  public create({ description, name }: ICategoryDTO): void {
     const categoryAlreadyExists = this.repository.findByName(name);
+
     if (categoryAlreadyExists) {
       throw new Error("Category Alread exists!");
     }
+
     this.repository.create({ name, description });
   }
 }
+
 export { CategoryService };
