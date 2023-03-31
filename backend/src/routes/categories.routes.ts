@@ -10,8 +10,7 @@ categoriesRoutes.post("/", (request, response) => {
 });
 
 categoriesRoutes.get("/", (request, response) => {
-  const all = categoriesRepository.listAll();
-  response.json(all);
+  return categoryController.handleList(request, response);
 });
 
 export { categoriesRoutes };

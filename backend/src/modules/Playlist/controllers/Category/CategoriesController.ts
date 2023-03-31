@@ -10,16 +10,13 @@ class CategoriesController {
 
   public handleCreate(request: Request, response: Response): Response {
     const { name } = request.body;
-
     this.services.create({ name });
     return response.status(201).send();
   }
 
   public handleList(request: Request, response: Response): Response {
-    const { name } = request.body;
-
-    this.services.create({ name });
-    return response.status(201).send();
+    const all = this.services.listAll();
+    return response.status(200).json(all);
   }
 }
 

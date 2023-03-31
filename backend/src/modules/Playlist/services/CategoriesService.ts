@@ -1,3 +1,4 @@
+import { Category } from "../model/Category";
 import { ICategory, ICategoryDTO } from "../repositories/Category/ICategory";
 
 class CategoriesService {
@@ -15,6 +16,10 @@ class CategoriesService {
     }
 
     this.repository.create({ name });
+  }
+
+  public listAll(): Category[] {
+    return this.repository.listAll();
   }
 }
 
