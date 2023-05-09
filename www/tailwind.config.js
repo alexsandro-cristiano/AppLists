@@ -5,8 +5,20 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}"
   ],
-  plugins: [require("daisyui")],
-  daisyui: {
-    themes: []
-  }
+  theme: {
+    extend: {
+      colors: {
+        transparent: "transparent",
+        primary: "#F24194",
+        secundary: "#F2D43D",
+        neutral: "#f8f8f8",
+        base: "#202024",
+        info: "#60a5fa",
+        success: "#00DE5E",
+        warning: "#fbbf24",
+        error: "#dc2626"
+      }
+    }
+  },
+  plugins: [require("daisyui")]
 };

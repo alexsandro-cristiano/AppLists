@@ -1,0 +1,40 @@
+.appContainer {
+  @apply px-6 md:px-12 lg:px-20 !important;
+}
+.flexCenter {
+  @apply flex justify-center items-center !important;
+}
+.flexBetween {
+  @apply flex justify-between items-center !important;
+}
+.title {
+  @apply text-4xl lg:text-6xl font-bold !important;
+}
+.subtitle {
+  @apply text-3xl lg:text-[35px] font-medium !important;
+}
+.subtitle-secundary {
+  @apply text-lg font-semibold !important;
+}
+.text {
+  @apply text-base lg:text-lg font-normal  !important;
+}
+.btn {
+  @apply lowercase font-medium w-36 px-4 py-3 rounded duration-300 ease-in-out  hover:opacity-70 !important;
+}
+.btn-small {
+  @apply w-24  !important;
+}
+.btn-medium {
+  @apply w-48  !important;
+}
+.btn-full {
+  @apply w-full  !important;
+}
+
+.btn-primary {
+  @apply bg-primary border-primary !important;
+}
+.btn-secondary {
+  @apply bg-secundary border-secundary !important;
+}
