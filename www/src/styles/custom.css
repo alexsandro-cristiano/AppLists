@@ -7,6 +7,9 @@
 .flexBetween {
   @apply flex justify-between items-center !important;
 }
+.flexCol {
+  @apply flex flex-col !important;
+}
 .title {
   @apply text-4xl lg:text-6xl font-bold !important;
 }
